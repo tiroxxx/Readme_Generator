@@ -1,7 +1,9 @@
+// getting the required libraries to create this app
 const inquirer = require("inquirer");
 const fs = require("fs");
+// hooking the generateMarkdown file to this one
 const generateMarkdown = require("./utils/generateMarkdown");
-
+// asking the necessary questions to create a readme
 inquirer.prompt([
     {
         type: "input",
@@ -51,6 +53,7 @@ inquirer.prompt([
     }
 ])
     .then(response => {
+        // choosing the correct license badge depending on the user's choice
         let badgeURL;
         if (response.license === "GNU GPLv3") {
             badgeURL = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
@@ -61,9 +64,9 @@ inquirer.prompt([
         if (response.license === "Apache License 2.0") {
             badgeURL = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
         }
-
+        // generating readme
         const markdownFile = generateMarkdown(response, badgeURL);
-
+        // creating readme.md file with the generated readme
         fs.writeFile("README.md", markdownFile, function (err) {
             if (err) throw err;
         })
