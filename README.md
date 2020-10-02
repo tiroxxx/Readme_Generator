@@ -14,7 +14,7 @@
   ## Installation
   Run this to install
   npm i
-  
+
   ## Usage
   Just do it forehead
 
