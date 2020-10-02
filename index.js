@@ -64,9 +64,6 @@ inquirer.prompt([
 
         const markdownFile = generateMarkdown(response, badgeURL);
 
-
-
-
         fs.writeFile("README.md", markdownFile, function (err) {
             if (err) throw err;
         })

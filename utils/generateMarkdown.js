@@ -14,7 +14,7 @@ function generateMarkdown(data, url) {
   * [Questions](#questions)
   
   ## Installation
-  Run this to install
+  Run this to install <br>
   ${data.install}
   
   ## Usage
@@ -30,12 +30,12 @@ function generateMarkdown(data, url) {
   After forking this repository, contributions in the form of issues and pull requests are welcomed and encouraged.
 
   ## Tests
-  To test this application, run the following command
+  To test this application, run the following command <br>
   ${data.test}
 
   ## Questions
-  If there are any questions about this application, 
-  please contact me through email at ${data.email}
+  If there are any questions about this application, <br>
+  please contact me through email at ${data.email}  <br>
   Github : https://github.com/${data.github}
   
 `;
