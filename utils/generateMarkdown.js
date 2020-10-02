@@ -1,7 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data, url) {
-  return `
-  # ${data.title}
+  return `# ${data.title}
   ${url}
   ## Description 
   ${data.description}
@@ -9,14 +8,14 @@ function generateMarkdown(data, url) {
   
   * [Installation](#installation)
   * [Usage](#usage)
-  * [License](#license)
   * [Credits](#credits)
-  * [Tests](#test)
+  * [License](#license)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
   Run this to install <br>
-  ${data.install}
+  <code><pre>${data.install}</code></pre>
   
   ## Usage
   ${data.usage}
@@ -25,14 +24,14 @@ function generateMarkdown(data, url) {
   Contributors: ${data.credit}
   
   ## License
-  This program is licensed under ${data.license}
+  This program is licensed under <code>${data.license}</code>
   
   ## Contributing
   After forking this repository, contributions in the form of issues and pull requests are welcomed and encouraged.
 
   ## Tests
   To test this application, run the following command <br>
-  ${data.test}
+  <code><pre>${data.test}</code></pre>
 
   ## Questions
   If there are any questions about this application, <br>

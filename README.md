@@ -8,12 +8,12 @@
   * [Usage](#usage)
   * [License](#license)
   * [Credits](#credits)
-  * [Tests](#test)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
   Run this to install
-  npm i
+  <pre><code>npm i</code></pre>
 
   ## Usage
   Just do it forehead
