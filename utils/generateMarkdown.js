@@ -14,8 +14,8 @@ function generateMarkdown(data, url) {
   * [Questions](#questions)
   
   ## Installation
-  Run this to install <br>
-  <code><pre>${data.install}</code></pre>
+  Run this to install
+  <pre><code>${data.install}</code></pre>
   
   ## Usage
   ${data.usage}
@@ -30,8 +30,8 @@ function generateMarkdown(data, url) {
   After forking this repository, contributions in the form of issues and pull requests are welcomed and encouraged.
 
   ## Tests
-  To test this application, run the following command <br>
-  <code><pre>${data.test}</code></pre>
+  To test this application, run the following command
+  <pre><code>${data.test}</code></pre>
 
   ## Questions
   If there are any questions about this application, <br>
