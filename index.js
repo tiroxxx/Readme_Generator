@@ -32,7 +32,7 @@ inquirer.prompt([
     {
         type: "input",
         message: "Who contributed to this application?",
-        name: "contribute"
+        name: "credit"
     },
     {
         type: "input",
