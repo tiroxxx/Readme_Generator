@@ -50,14 +50,24 @@ inquirer.prompt([
         name: "email"
     }
 ])
-.then(response => {
+    .then(response => {
+        let badgeURL;
+        if (response.license === "GNU GPLv3") {
+            badgeURL = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
+        }
+        if (response.license === "MIT License") {
+            badgeURL = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        }
+        if (response.license === "Apache License 2.0") {
+            badgeURL = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+        }
 
-    const markdownFile = generateMarkdown(response);
+        const markdownFile = generateMarkdown(response, badgeURL);
 
-   
-   
-   
-    fs.writeFile("README.md", markdownFile, function(err){
-        if(err) throw err;
+
+
+
+        fs.writeFile("README.md", markdownFile, function (err) {
+            if (err) throw err;
+        })
     })
-})
