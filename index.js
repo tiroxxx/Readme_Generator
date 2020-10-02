@@ -26,7 +26,7 @@ inquirer.prompt([
     },
     {
         type: "list",
-        message: ["GNU GPLv3", "MIT License", "Apache License 2.0"],
+        choices: ["GNU GPLv3", "MIT License", "Apache License 2.0"],
         name: "license"
     },
     {
